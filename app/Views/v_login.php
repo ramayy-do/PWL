@@ -1,5 +1,5 @@
 <?= $this->extend('layout_clear') ?>
-<?= $this->section('main') ?>
+<?= $this->section('content') ?>
 
 <?php
 $username = [
