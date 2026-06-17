@@ -28,6 +28,12 @@ $routes->group('keranjang', ['filter' => 'auth'], function ($routes) {
     $routes->get('clear', 'TransaksiController::cart_clear');
 });
 
+$routes->get('checkout', 'TransaksiController::checkout', ['filter' => 'auth']);
+$routes->post('buy', 'TransaksiController::buy', ['filter' => 'auth']);
+
+$routes->get('ajax/destinations', 'TransaksiController::destinations', ['filter' => 'auth']);
+$routes->get('ajax/costs', 'TransaksiController::costs', ['filter' => 'auth']);
+
 $routes->get('keranjang', 'TransaksiController::index', ['filter' => 'auth']);
 
 // ← TAMBAHAN: Route halaman profil, dilindungi filter auth

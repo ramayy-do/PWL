@@ -1,0 +1,8 @@
+curl --location 'https://rajaongkir.komerce.id/api/v1/calculate/domestic-cost' \
+--header 'key: inputapikey' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'origin={{ origin.id }}' \
+--data-urlencode 'destination={{ destination.id }}' \
+--data-urlencode 'weight={{ weight.grams }}' \
+--data-urlencode 'courier={{ courier.code }}' \
+--data-urlencode 'price={{ lowest/highest }}'
